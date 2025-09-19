@@ -15,16 +15,16 @@ public class Monster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int localNumber;  //numer potwora w danym regionie
+    private int localNumber;
     @Enumerated(EnumType.STRING)
-    private Region region;  //region w którym występuje potwór
-    private String type;    //typ potwora
-    private String name;   //nazwa potwora
-    private String description;  //opis potwora
-    private String weakness;  //slabosci, na co jest podatny
-    private String strengths; //silne strony
-    private String level;    //poziom potwora
-    private boolean boss;   //czy to boss
+    private Region region;
+    private String type;
+    private String name;
+    private String description;
+    private String weakness;
+    private String strengths;
+    private String level;
+    private boolean boss;
 
     public Monster(int localNumber, Region region,
                    String type, String name, String
