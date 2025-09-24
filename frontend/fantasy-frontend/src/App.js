@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import MonstersList from './MonstersList';
-import ArmorList from './ArmorList';
-import WeaponList from './WeaponList';
-import BossesView from './BossesView_OLD.jsx';
-import BossesView_OLD from './BossesView_OLD.jsx';
+import MonstersList from './components/Lists/MonstersList.js';
+import ArmorList from './components/Lists/ArmorList.js';
+import WeaponList from './components/Lists/WeaponList.js';
+import BossesView from './components/Lists/BossesView_OLD.jsx';
+import BossesView_OLD from './components/Lists/BossesView_OLD.jsx';
 console.log('BossesView typeof:', typeof BossesView); 
 console.log('BossesView:', BossesView);
 console.log('BossesView.default:', BossesView?.default);
@@ -11,7 +11,7 @@ console.log('BossesView.default:', BossesView?.default);
 
 const REGIONS = [
   "FEROXAR", "DANVHEIM", "AUREA_IMPERIUM_LUCIS", "HAMMERGRIM",
-  "ARETUZA", "WILDLANDS", "SILMARIL", "AEN_ELLE", "VENTIRO",
+  "ARETUZA", "GREAT_SWAMP", "WILDLANDS", "SILMARIL", "AEN_ELLE", "VENTIRO",
   "WALLACHIA", "CELVIC", "MAHABRE", "LAURAN", "ELGAE", "PHLEGETHOS"
 ];
 

@@ -7,6 +7,11 @@ import lombok.NoArgsConstructor;
 import pl.kurs.bestiariusz.enums.Rarity;
 import pl.kurs.bestiariusz.models.Weapon;
 
+/**
+ * DTO command to update ({@link Weapon} entity
+ * This class works as a specialized DTO that represents
+ * the update request for an existing weapon.
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -18,6 +23,11 @@ public class UpdateWeaponCommand {
     public String statistic;
     public String specialBuffs;
 
+    /**
+     * Applies the updates from comand to the given entity
+     *
+     * @param weapon entity to upgrade
+     */
     public void update(Weapon weapon) {
         if (name != null) weapon.setName(name);
         if (description != null) weapon.setDescription(description);

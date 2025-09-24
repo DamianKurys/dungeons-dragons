@@ -7,6 +7,11 @@ import lombok.NoArgsConstructor;
 import pl.kurs.bestiariusz.enums.Rarity;
 import pl.kurs.bestiariusz.models.Weapon;
 
+/**
+ * DTO command to create new monster ({@link pl.kurs.bestiariusz.models.Weapon}
+ * Object is created by data from JSON and HTTP request or Postman
+ * and object is converted to entity
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

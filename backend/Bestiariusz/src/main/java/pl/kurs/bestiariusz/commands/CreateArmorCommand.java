@@ -7,6 +7,11 @@ import lombok.NoArgsConstructor;
 import pl.kurs.bestiariusz.enums.Rarity;
 import pl.kurs.bestiariusz.models.Armor;
 
+/**
+ * DTO command to create new ({@link Armor}.
+ * Object is created by data from JSON from HTTP request or Postman
+ * and object is converted to entity
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

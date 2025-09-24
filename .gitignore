@@ -1,0 +1,17 @@
+# == Backend (Java/Maven/Intelij)
+backend/target/
+backend/.idea/
+backend/*.iml
+
+# === Frontend (Node/React)
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.next/
+
+# === Systemowe / wspólne
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*.local
