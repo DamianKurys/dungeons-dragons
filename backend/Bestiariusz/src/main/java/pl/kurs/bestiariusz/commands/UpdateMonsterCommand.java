@@ -7,6 +7,11 @@ import lombok.NoArgsConstructor;
 import pl.kurs.bestiariusz.enums.Region;
 import pl.kurs.bestiariusz.models.Monster;
 
+/**
+ * DTO command to update ({@link Monster} entity
+ * This class works as a specialized DTO that represents
+ * the update request for an existing monster.
+ */
 @Getter
 @Builder
 @NoArgsConstructor
@@ -22,6 +27,11 @@ public class UpdateMonsterCommand {
     private Integer localNumber;
     private Boolean boss;
 
+    /**
+     * Applies the updates from comand to the given entity
+     *
+     * @param monster entity to upgrade
+     */
     public void update(Monster monster) {
         if (name != null) monster.setName(name);
         if (type != null) monster.setType(type);

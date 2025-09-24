@@ -1,5 +1,8 @@
 package pl.kurs.bestiariusz.enums;
 
+/**
+ * Enum describing the whole regions in world
+ */
 public enum Region {
     FEROXAR,
     AUREA_IMPERIUM_LUCIS,
@@ -15,7 +18,8 @@ public enum Region {
     MAHABRE,
     LAURAN,
     ELGAE,
-    PHLEGETHOS
+    PHLEGETHOS,
+    GREAT_SWAMP
     
 
 }

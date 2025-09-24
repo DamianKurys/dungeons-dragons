@@ -79,7 +79,5 @@ public class ArmorControllerIT {
         assertThat(armor1.getName()).isEqualTo(armor.getName());
         assertThat(armor1.getRarity()).isEqualTo(armor.getRarity());
         assertThat(armor1.getDescription()).isEqualTo(armor.getDescription());
-
-
     }
 }
