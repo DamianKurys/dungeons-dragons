@@ -109,7 +109,7 @@ public class MonsterController {
      * @return a list of monsters marked as bosses
      */
     @GetMapping("/bosses")
-    public List<Monster> bosses(@RequestParam(required = false) Region region) {
+    public List<Monster> getBosses(@RequestParam(required = false) Region region) {
         return monsterService.findBoss(region, true);
     }
 }

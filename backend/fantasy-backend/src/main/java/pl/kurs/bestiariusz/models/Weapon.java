@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 import lombok.*;
 import pl.kurs.bestiariusz.enums.Rarity;
 
+import java.util.Objects;
+
 /**
  * Entity represent weapon
  * Contains name, damage, description, statstic, special buffs,
@@ -54,5 +56,18 @@ public class Weapon {
         this.rarity = rarity;
         this.statistic = statistic;
         this.specialBuffs = specialBuffs;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Weapon weapon = (Weapon) o;
+        return damage == weapon.damage && Objects.equals(id, weapon.id) && Objects.equals(name, weapon.name) && Objects.equals(description, weapon.description) && rarity == weapon.rarity && Objects.equals(statistic, weapon.statistic) && Objects.equals(specialBuffs, weapon.specialBuffs);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, damage, description, rarity, statistic, specialBuffs);
     }
 }

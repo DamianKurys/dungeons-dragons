@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import pl.kurs.bestiariusz.enums.Region;
 
+import java.util.Objects;
+
 /**
  * Entity represent monster
  * Contains local number, region({@link Region},
@@ -73,5 +75,18 @@ public class Monster {
         this.strengths = strengths;
         this.level = level;
         this.boss = boss;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Monster monster = (Monster) o;
+        return localNumber == monster.localNumber && boss == monster.boss && Objects.equals(id, monster.id) && region == monster.region && Objects.equals(type, monster.type) && Objects.equals(name, monster.name) && Objects.equals(description, monster.description) && Objects.equals(weakness, monster.weakness) && Objects.equals(strengths, monster.strengths) && Objects.equals(level, monster.level);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, localNumber, region, type, name, description, weakness, strengths, level, boss);
     }
 }

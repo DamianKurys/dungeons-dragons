@@ -17,6 +17,7 @@ import pl.kurs.bestiariusz.models.Weapon;
 @Getter
 @Builder
 public class UpdateWeaponCommand {
+    public int damage;
     public String name;
     public String description;
     public Rarity rarity;
@@ -29,6 +30,7 @@ public class UpdateWeaponCommand {
      * @param weapon entity to upgrade
      */
     public void update(Weapon weapon) {
+        if (damage != 0) weapon.setDamage(damage);
         if (name != null) weapon.setName(name);
         if (description != null) weapon.setDescription(description);
         if (rarity != null) weapon.setRarity(rarity);

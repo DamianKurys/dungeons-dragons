@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>pl.kurs</groupId>
-    <artifactId>Bestiariusz</artifactId>
+    <artifactId>fantasy-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Bestiariusz</name>
     <description>Bestiariusz</description>
